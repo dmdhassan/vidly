@@ -97,7 +97,7 @@ class Movies extends Component {
         const {pageSize, currentPage, searchQuery} = this.state;
         const {data: movies, totalNumber} = this.getPageData();
         
-        if (count === 0) return <p>There is no movie in the database today</p>
+        // if (count === 0) return <p>There is no movie in the database today</p>
         
         return (
                 <div className="row mt-5">

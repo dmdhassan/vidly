@@ -1,5 +1,4 @@
 import http from "./httpRequests";
-import { base_url } from "../config.json";
 import jwtDecode from "jwt-decode";
 
 const tokenKey = 'token';
@@ -7,7 +6,7 @@ const tokenKey = 'token';
 http.setJwt(getJwt())
 
 export const login = async (email, password) => {
-    const { data:jwt } = await http.post(base_url + "/auth", {
+    const { data:jwt } = await http.post("/auth", {
         email,
         password
     })

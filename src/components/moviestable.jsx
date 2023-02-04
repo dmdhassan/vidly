@@ -36,7 +36,6 @@ class MoviesTable extends Component {
 
         } else {
             columns = this.columns.filter(column => column['key'] !== "delete");
-            console.log(columns)
         }
 
         return (

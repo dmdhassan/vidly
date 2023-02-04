@@ -1,13 +1,12 @@
 import http from "./httpRequests";
-import { base_url } from "../config.json";
 
 
 function movieUrl(id) {
-    return `${base_url}/movies/${id}`
+    return `/movies/${id}`
 }
 
 export const getMovies = () => {
-    return http.get(base_url + "/movies")
+    return http.get("/movies")
     
 }
 
@@ -29,5 +28,5 @@ export const saveMovie = (movie) => {
     }
     
     console.log(movieUrl(movie._id))
-    return http.post(base_url + "/movies", movie);
+    return http.post("/movies", movie);
   }
